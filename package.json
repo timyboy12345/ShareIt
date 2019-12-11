@@ -1,0 +1,22 @@
+{
+  "name": "shareit",
+  "version": "1.0.0",
+  "description": "A package to share pages quickly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timyboy12345/ShareIt.git"
+  },
+  "author": "Tim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timyboy12345/ShareIt/issues"
+  },
+  "homepage": "https://github.com/timyboy12345/ShareIt#readme",
+  "dependencies": {
+    "webpack": "^4.41.2"
+  }
+}
