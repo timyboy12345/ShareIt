@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShareIt / A javascript plugin to easily create share buttons</title>
+    <meta name="description"
+          content="With ShareIt, you can easily create share buttons for all your favorite platforms, without having to copy/paste a lot of links.">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<main class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1>ShareIt.js</h1>
+            <p>With ShareIt, you can easily create share buttons without copy/paste hastle. You can create share buttons
+                with data attributes, or with JQuery.</p>
+            <p class="text-primary">This package uses FontAwesome for the icons and Bootstrap for the button classes,
+                however, you're free to edit these settings in the settings.json file and rebuilding the package.</p>
+        </div>
+
+        <div class="col-12">
+            <hr>
+            <h3>Share buttons with data attributes</h3>
+            <div data-shareit="facebook twitter whatsapp linkedin pinterest copy sms tumblr telegram"
+                 data-sharesuccess="Link has been copied!" data-shareerror="Couldn't copy the link!"
+                 data-sharetext="This is a test to show the capabilities of this share package."></div>
+
+            <p class="mt-2">These buttons are created using <span class="badge badge-dark">data</span>-attributes. This
+                way, you only need to import the shareit.js script, and don't need to write your own javascript.</p>
+        </div>
+
+        <div class="col-12">
+            <hr>
+            <h3>Share buttons with JQuery</h3>
+            <div class="share"></div>
+
+            <p class="mt-2">These buttons are created using <span class="badge badge-dark">jQuery</span>. You can use
+                the same options as you can with data attributes, and you can specify which elements you want to add
+                share elements to. This is great for adding the same share elements to multiple places.</p>
+            <hr>
+        </div>
+
+        <div class="col-12 col-sm-6">
+            <h3>Small share buttons</h3>
+            <div data-shareit="twitter whatsapp" data-sharesize="small"
+                 data-sharetext="Dit is een test"></div>
+        </div>
+
+        <div class="col-12 col-sm-6">
+            <h3>Large share buttons</h3>
+            <div data-shareit="twitter whatsapp" data-sharesize="large"
+                 data-sharetext="Dit is een test"></div>
+        </div>
+    </div>
+
+    <script src="./dist/shareit.js"></script>
+    <script>
+        $(".share").share({
+            "media": [
+                "facebook",
+                "twitter",
+                "whatsapp",
+                "linkedin",
+                "pinterest",
+                "copy",
+                "sms",
+                "tumblr",
+                "telegram"
+            ],
+            "message": "This is a message"
+        });
+    </script>
+</main>
+</body>
+</html>
